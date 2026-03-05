@@ -9,7 +9,7 @@ import {
   pluralize,
   sleep,
   buildQueryString,
-} from '~/utils/helpers'
+} from '~shared/utils/helpers'
 
 describe('helpers', () => {
   describe('debounce', () => {

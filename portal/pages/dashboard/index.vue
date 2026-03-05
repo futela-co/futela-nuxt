@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useDashboardStore } from '~/application/stores/dashboard'
-import { useAuthStore } from '~/application/stores/auth'
+import { useDashboardStore } from '~shared/application/stores/dashboard'
+import { useAuthStore } from '~shared/application/stores/auth'
 
 definePageMeta({ layout: 'dashboard' })
 

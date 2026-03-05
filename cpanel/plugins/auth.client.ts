@@ -1,4 +1,4 @@
-import { useAuthStore } from '~/application/stores/auth'
+import { useAuthStore } from '~shared/application/stores/auth'
 
 export default defineNuxtPlugin(async () => {
   try {

@@ -5,7 +5,7 @@ import {
   ArchiveBoxIcon,
   TrashIcon,
 } from '@heroicons/vue/24/outline'
-import type { Conversation } from '~/domain/types/user'
+import type { Conversation } from '~shared/domain/types/user'
 
 const props = defineProps<{
   conversation: Conversation

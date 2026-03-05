@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { HeartIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/outline'
-import { favoritesApi } from '~/infrastructure/api/favorites'
-import { useFavoritesStore } from '~/application/stores/favorites'
-import type { Property } from '~/domain/types/property'
+import { favoritesApi } from '~shared/infrastructure/api/favorites'
+import { useFavoritesStore } from '~shared/application/stores/favorites'
+import type { Property } from '~shared/domain/types/property'
 
 definePageMeta({ layout: 'dashboard' })
 

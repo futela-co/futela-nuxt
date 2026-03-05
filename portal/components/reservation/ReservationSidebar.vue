@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CalendarIcon, FlagIcon } from '@heroicons/vue/24/outline'
-import { useAuthStore } from '~/application/stores/auth'
-import type { Property } from '~/domain/types/property'
+import { useAuthStore } from '~shared/application/stores/auth'
+import type { Property } from '~shared/domain/types/property'
 
 interface Props {
   property: Property

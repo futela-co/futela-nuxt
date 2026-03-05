@@ -4,8 +4,8 @@ import {
   LockClosedIcon,
   CheckCircleIcon,
 } from '@heroicons/vue/24/outline'
-import { useAuthStore } from '~/application/stores/auth'
-import { userApi } from '~/infrastructure/api/user'
+import { useAuthStore } from '~shared/application/stores/auth'
+import { userApi } from '~shared/infrastructure/api/user'
 
 definePageMeta({ layout: 'dashboard' })
 

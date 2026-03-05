@@ -9,9 +9,9 @@ import {
   BuildingLibraryIcon,
   TruckIcon,
 } from '@heroicons/vue/24/outline'
-import { geographyApi } from '~/infrastructure/api/geography'
-import type { GeoSearchResult } from '~/infrastructure/api/geography'
-import type { Town } from '~/domain/types/property'
+import { geographyApi } from '~shared/infrastructure/api/geography'
+import type { GeoSearchResult } from '~shared/infrastructure/api/geography'
+import type { Town } from '~shared/domain/types/property'
 
 const { t } = useLocale()
 

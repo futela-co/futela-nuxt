@@ -10,10 +10,10 @@ import {
   XMarkIcon,
 } from '@heroicons/vue/24/outline'
 import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/vue/24/solid'
-import { reviewsApi } from '~/infrastructure/api/reviews'
-import { reservationsApi } from '~/infrastructure/api/reservations'
-import type { Property } from '~/domain/types/property'
-import type { Review } from '~/domain/types/user'
+import { reviewsApi } from '~shared/infrastructure/api/reviews'
+import { reservationsApi } from '~shared/infrastructure/api/reservations'
+import type { Property } from '~shared/domain/types/property'
+import type { Review } from '~shared/domain/types/user'
 
 definePageMeta({
   layout: 'default',

@@ -9,11 +9,11 @@ import {
 } from '@heroicons/vue/24/outline'
 import { StarIcon as StarSolid } from '@heroicons/vue/24/solid'
 import { StarIcon as StarOutline } from '@heroicons/vue/24/outline'
-import { visitsApi } from '~/infrastructure/api/visits'
-import { reviewsApi } from '~/infrastructure/api/reviews'
-import { formatDateTime, formatDateShort } from '~/utils/date'
-import type { Visit } from '~/domain/types/reservation'
-import type { Review } from '~/domain/types/user'
+import { visitsApi } from '~shared/infrastructure/api/visits'
+import { reviewsApi } from '~shared/infrastructure/api/reviews'
+import { formatDateTime, formatDateShort } from '~shared/utils/date'
+import type { Visit } from '~shared/domain/types/reservation'
+import type { Review } from '~shared/domain/types/user'
 
 definePageMeta({ layout: 'dashboard' })
 

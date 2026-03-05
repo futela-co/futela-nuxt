@@ -9,7 +9,7 @@ import {
   getInitials,
   formatPhone,
   formatFileSize,
-} from '~/utils/formatters'
+} from '~shared/utils/formatters'
 
 describe('formatters', () => {
   describe('formatPrice', () => {

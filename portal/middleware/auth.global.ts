@@ -1,5 +1,5 @@
-import { useAuthStore } from '~/application/stores/auth'
-import { useUiStore } from '~/application/stores/ui'
+import { useAuthStore } from '~shared/application/stores/auth'
+import { useUiStore } from '~shared/application/stores/ui'
 
 let lastUserCheck = 0
 const USER_CHECK_INTERVAL = 60000

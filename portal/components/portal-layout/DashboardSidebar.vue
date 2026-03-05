@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useAuthStore } from '~/application/stores/auth'
-import { userDashboardNav, landlordDashboardNav } from '~/config/navigation'
+import { useAuthStore } from '~shared/application/stores/auth'
+import { userDashboardNav, landlordDashboardNav } from '~shared/config/navigation'
 import {
   ChevronRightIcon,
   ChevronLeftIcon,

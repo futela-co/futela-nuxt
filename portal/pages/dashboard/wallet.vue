@@ -4,9 +4,9 @@ import {
   ArrowDownIcon,
   BanknotesIcon,
 } from '@heroicons/vue/24/outline'
-import { walletApi } from '~/infrastructure/api/wallet'
-import { formatDateTime } from '~/utils/date'
-import type { Transaction } from '~/domain/types/user'
+import { walletApi } from '~shared/infrastructure/api/wallet'
+import { formatDateTime } from '~shared/utils/date'
+import type { Transaction } from '~shared/domain/types/user'
 
 definePageMeta({ layout: 'dashboard' })
 

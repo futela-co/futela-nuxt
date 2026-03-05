@@ -8,8 +8,8 @@ import {
   HomeModernIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/vue/24/outline'
-import { propertiesApi } from '~/infrastructure/api/properties'
-import type { Property } from '~/domain/types/property'
+import { propertiesApi } from '~shared/infrastructure/api/properties'
+import type { Property } from '~shared/domain/types/property'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 
