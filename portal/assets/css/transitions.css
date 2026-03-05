@@ -1,0 +1,611 @@
+/* =============================================
+   Futela — Vue Transitions & Animations
+   Based on Kitunga/IGDG design system
+   ============================================= */
+
+/* -----------------------------------------
+   PAGE TRANSITIONS
+   ----------------------------------------- */
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.page-enter-from {
+    opacity: 0;
+    transform: translateY(4px);
+}
+.page-leave-to {
+    opacity: 0;
+    transform: translateY(-4px);
+}
+
+/* -----------------------------------------
+   LAYOUT
+   ----------------------------------------- */
+.layout-enter-active,
+.layout-leave-active {
+    transition: opacity 0.2s ease;
+}
+.layout-enter-from,
+.layout-leave-to {
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   FADE
+   ----------------------------------------- */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* Fade fast */
+.fade-fast-enter-active,
+.fade-fast-leave-active {
+    transition: opacity 0.1s ease;
+}
+.fade-fast-enter-from,
+.fade-fast-leave-to {
+    opacity: 0;
+}
+
+/* Fade slow */
+.fade-slow-enter-active,
+.fade-slow-leave-active {
+    transition: opacity 0.4s ease;
+}
+.fade-slow-enter-from,
+.fade-slow-leave-to {
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   SLIDE UP
+   ----------------------------------------- */
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slide-up-enter-from {
+    opacity: 0;
+    transform: translateY(12px);
+}
+.slide-up-leave-to {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* -----------------------------------------
+   SLIDE DOWN
+   ----------------------------------------- */
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slide-down-enter-from {
+    opacity: 0;
+    transform: translateY(-12px);
+}
+.slide-down-leave-to {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+/* -----------------------------------------
+   SLIDE LEFT
+   ----------------------------------------- */
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slide-left-enter-from {
+    opacity: 0;
+    transform: translateX(-16px);
+}
+.slide-left-leave-to {
+    opacity: 0;
+    transform: translateX(16px);
+}
+
+/* -----------------------------------------
+   SLIDE RIGHT
+   ----------------------------------------- */
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slide-right-enter-from {
+    opacity: 0;
+    transform: translateX(16px);
+}
+.slide-right-leave-to {
+    opacity: 0;
+    transform: translateX(-16px);
+}
+
+/* -----------------------------------------
+   SCALE
+   ----------------------------------------- */
+.scale-enter-active,
+.scale-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.scale-enter-from {
+    opacity: 0;
+    transform: scale(0.95);
+}
+.scale-leave-to {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* -----------------------------------------
+   MODAL
+   ----------------------------------------- */
+.modal-enter-active,
+.modal-leave-active {
+    transition: opacity 0.25s ease;
+}
+.modal-enter-from,
+.modal-leave-to {
+    opacity: 0;
+}
+
+.modal-enter-active .modal-component,
+.modal-enter-active .modal-dialog,
+.modal-leave-active .modal-component,
+.modal-leave-active .modal-dialog {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.modal-enter-from .modal-component,
+.modal-enter-from .modal-dialog {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+}
+.modal-leave-to .modal-component,
+.modal-leave-to .modal-dialog {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+}
+
+/* -----------------------------------------
+   DRAWER LEFT
+   ----------------------------------------- */
+.drawer-left-enter-active,
+.drawer-left-leave-active {
+    transition: opacity 0.25s ease;
+}
+.drawer-left-enter-from,
+.drawer-left-leave-to {
+    opacity: 0;
+}
+
+.drawer-left-enter-active .drawer-content,
+.drawer-left-enter-active .drawer-panel,
+.drawer-left-leave-active .drawer-content,
+.drawer-left-leave-active .drawer-panel {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drawer-left-enter-from .drawer-content,
+.drawer-left-enter-from .drawer-panel {
+    transform: translateX(-100%);
+}
+.drawer-left-leave-to .drawer-content,
+.drawer-left-leave-to .drawer-panel {
+    transform: translateX(-100%);
+}
+
+/* -----------------------------------------
+   DRAWER RIGHT
+   ----------------------------------------- */
+.drawer-right-enter-active,
+.drawer-right-leave-active {
+    transition: opacity 0.25s ease;
+}
+.drawer-right-enter-from,
+.drawer-right-leave-to {
+    opacity: 0;
+}
+
+.drawer-right-enter-active .drawer-content,
+.drawer-right-enter-active .drawer-panel,
+.drawer-right-leave-active .drawer-content,
+.drawer-right-leave-active .drawer-panel {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drawer-right-enter-from .drawer-content,
+.drawer-right-enter-from .drawer-panel {
+    transform: translateX(100%);
+}
+.drawer-right-leave-to .drawer-content,
+.drawer-right-leave-to .drawer-panel {
+    transform: translateX(100%);
+}
+
+/* -----------------------------------------
+   DROPDOWN
+   ----------------------------------------- */
+.dropdown-enter-active,
+.dropdown-leave-active {
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.dropdown-enter-from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+}
+.dropdown-leave-to {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+}
+
+/* -----------------------------------------
+   TOOLTIP
+   ----------------------------------------- */
+.tooltip-enter-active,
+.tooltip-leave-active {
+    transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.tooltip-enter-from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+}
+.tooltip-leave-to {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+}
+
+/* -----------------------------------------
+   ACCORDION / COLLAPSE
+   ----------------------------------------- */
+.accordion-enter-active {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+.accordion-leave-active {
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+    overflow: hidden;
+}
+.accordion-enter-from {
+    max-height: 0;
+    opacity: 0;
+}
+.accordion-leave-to {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   EXPAND (height auto)
+   ----------------------------------------- */
+.expand-enter-active,
+.expand-leave-active {
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    overflow: hidden;
+}
+.expand-enter-from,
+.expand-leave-to {
+    opacity: 0;
+    max-height: 0;
+}
+
+/* -----------------------------------------
+   LIST (TransitionGroup)
+   ----------------------------------------- */
+.list-enter-active,
+.list-leave-active {
+    transition: all 0.25s ease;
+}
+.list-enter-from {
+    opacity: 0;
+    transform: translateX(-16px);
+}
+.list-leave-to {
+    opacity: 0;
+    transform: translateX(16px);
+}
+.list-move {
+    transition: transform 0.3s ease;
+}
+
+/* Staggered list */
+.list-stagger-enter-active {
+    transition: all 0.3s ease;
+}
+.list-stagger-leave-active {
+    transition: all 0.2s ease;
+    position: absolute;
+}
+.list-stagger-enter-from,
+.list-stagger-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* -----------------------------------------
+   TOAST
+   ----------------------------------------- */
+.toast-enter-active {
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toast-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.toast-enter-from {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+}
+.toast-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* -----------------------------------------
+   ALERT
+   ----------------------------------------- */
+.alert-enter-active,
+.alert-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.alert-enter-from {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+.alert-leave-to {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* -----------------------------------------
+   TAB
+   ----------------------------------------- */
+.tab-enter-active,
+.tab-leave-active {
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.tab-enter-from {
+    opacity: 0;
+    transform: translateX(8px);
+}
+.tab-leave-to {
+    opacity: 0;
+    transform: translateX(-8px);
+}
+
+/* -----------------------------------------
+   ZOOM
+   ----------------------------------------- */
+.zoom-enter-active,
+.zoom-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.zoom-enter-from {
+    opacity: 0;
+    transform: scale(0.85);
+}
+.zoom-leave-to {
+    opacity: 0;
+    transform: scale(0.85);
+}
+
+/* -----------------------------------------
+   BOUNCE
+   ----------------------------------------- */
+.bounce-enter-active {
+    animation: bounceIn 0.4s ease;
+}
+.bounce-leave-active {
+    animation: bounceOut 0.3s ease;
+}
+
+@keyframes bounceIn {
+    0%   { opacity: 0; transform: scale(0.3); }
+    50%  { transform: scale(1.05); }
+    70%  { transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceOut {
+    0%   { opacity: 1; transform: scale(1); }
+    25%  { transform: scale(0.95); }
+    100% { opacity: 0; transform: scale(0.3); }
+}
+
+/* -----------------------------------------
+   NOTIFICATION (slide from right)
+   ----------------------------------------- */
+.notification-enter-active {
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.notification-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.notification-enter-from {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.notification-leave-to {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* -----------------------------------------
+   SKELETON / LOADING
+   ----------------------------------------- */
+.skeleton-enter-active {
+    transition: opacity 0.2s ease;
+}
+.skeleton-leave-active {
+    transition: opacity 0.3s ease;
+}
+.skeleton-enter-from,
+.skeleton-leave-to {
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   IMAGE / MEDIA
+   ----------------------------------------- */
+.image-enter-active,
+.image-leave-active {
+    transition: opacity 0.3s ease;
+}
+.image-enter-from,
+.image-leave-to {
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   NOTIFICATION BADGE
+   ----------------------------------------- */
+.badge-bounce-enter-active {
+    animation: badgeBounce 0.5s ease;
+}
+
+@keyframes badgeBounce {
+    0%   { transform: scale(0); }
+    50%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* -----------------------------------------
+   SIDEBAR
+   ----------------------------------------- */
+.sidebar-item-enter-active,
+.sidebar-item-leave-active {
+    transition: all 0.2s ease;
+}
+.sidebar-item-enter-from,
+.sidebar-item-leave-to {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+/* Submenu expand */
+.submenu-enter-active,
+.submenu-leave-active {
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+.submenu-enter-from,
+.submenu-leave-to {
+    opacity: 0;
+    max-height: 0;
+}
+.submenu-enter-to,
+.submenu-leave-from {
+    max-height: 300px;
+}
+
+/* -----------------------------------------
+   POPOVER
+   ----------------------------------------- */
+.popover-enter-active,
+.popover-leave-active {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.popover-enter-from,
+.popover-leave-to {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* -----------------------------------------
+   PROGRESS BAR
+   ----------------------------------------- */
+.progress-enter-active {
+    transition: width 0.6s ease;
+}
+.progress-leave-active {
+    transition: opacity 0.3s ease;
+}
+.progress-leave-to {
+    opacity: 0;
+}
+
+/* -----------------------------------------
+   CARD FLIP
+   ----------------------------------------- */
+.flip-enter-active,
+.flip-leave-active {
+    transition: transform 0.4s ease;
+    transform-style: preserve-3d;
+}
+.flip-enter-from {
+    transform: rotateY(-90deg);
+}
+.flip-leave-to {
+    transform: rotateY(90deg);
+}
+
+/* -----------------------------------------
+   GROUP (Sidebar Group)
+   ----------------------------------------- */
+.group-enter-active,
+.group-leave-active {
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+    overflow: hidden;
+}
+.group-enter-from,
+.group-leave-to {
+    max-height: 0;
+    opacity: 0;
+}
+.group-enter-to,
+.group-leave-from {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+/* -----------------------------------------
+   UTILITY CLASSES
+   ----------------------------------------- */
+.transition-none {
+    transition: none !important;
+}
+
+.transition-all {
+    transition: all 0.25s ease;
+}
+
+.transition-fast {
+    transition: all 0.15s ease;
+}
+
+.transition-slow {
+    transition: all 0.35s ease;
+}
+
+.transition-slower {
+    transition: all 0.5s ease;
+}
+
+.transition-colors {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.transition-opacity {
+    transition: opacity 0.2s ease;
+}
+
+.transition-transform {
+    transition: transform 0.2s ease;
+}
+
+.transition-shadow {
+    transition: box-shadow 0.2s ease;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
