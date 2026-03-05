@@ -1,41 +1,23 @@
 export default defineNuxtConfig({
+  extends: ['../shared'],
+
   ssr: true,
 
   devServer: { port: 3006 },
 
-  css: [
-    '~/assets/css/main.css',
-    '~/assets/css/components.css',
-    '~/assets/css/transitions.css',
-  ],
-
   modules: [
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
     '@nuxtjs/sitemap',
     '@vite-pwa/nuxt',
   ],
 
   runtimeConfig: {
     public: {
-      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || 'http://localhost:8006/api',
-      appName: process.env.NUXT_PUBLIC_APP_NAME || 'Futela',
       googleClientId: process.env.NUXT_PUBLIC_GOOGLE_CLIENT_ID || '',
-      portalUrl: process.env.NUXT_PUBLIC_PORTAL_URL || 'http://localhost:3006',
-      cpanelUrl: process.env.NUXT_PUBLIC_CPANEL_URL || 'http://localhost:3007',
     },
-  },
-
-  typescript: {
-    strict: true,
   },
 
   components: {
     dirs: [
-      { path: '~/components/base', prefix: 'Base' },
-      { path: '~/components/form', prefix: 'Form' },
-      { path: '~/components/data', prefix: 'Data' },
-      { path: '~/components/layout', prefix: 'Admin' },
       { path: '~/components/auth', prefix: 'Auth' },
       { path: '~/components/dashboard', prefix: 'Dashboard' },
       { path: '~/components/landlord', prefix: 'Landlord' },
@@ -46,13 +28,6 @@ export default defineNuxtConfig({
       { path: '~/components/reservation', prefix: 'Reservation' },
       { path: '~/components/review', prefix: 'Review' },
       { path: '~/components/search', prefix: 'Search' },
-    ],
-  },
-
-  imports: {
-    dirs: [
-      'composables',
-      'stores',
     ],
   },
 
@@ -72,7 +47,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { name: 'description', content: 'Futela - Location et réservation immobilière en RDC' },
+        { name: 'description', content: 'Futela - Location et reservation immobiliere en RDC' },
         { name: 'theme-color', content: '#2563eb' },
       ],
       link: [
@@ -87,7 +62,7 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Futela',
       short_name: 'Futela',
-      description: 'Location et réservation immobilière en RDC',
+      description: 'Location et reservation immobiliere en RDC',
       theme_color: '#2563eb',
       background_color: '#ffffff',
       display: 'standalone',
@@ -117,13 +92,4 @@ export default defineNuxtConfig({
     sources: ['/api/__sitemap__/urls'],
     exclude: ['/dashboard/**', '/auth/**'],
   },
-
-  postcss: {
-    plugins: {
-      '@tailwindcss/postcss': {},
-      autoprefixer: {},
-    },
-  },
-
-  compatibilityDate: '2025-01-01',
 })
