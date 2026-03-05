@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
-import { authApi } from '~/infrastructure/api/auth'
-import { setTokens, clearTokens } from '~/infrastructure/api/client'
-import { hasRole as checkRole, ROLES } from '~/domain/constants/roles'
-import type { User, LoginRequest, RegisterRequest, TokenResponse } from '~/domain/types/auth'
+import { authApi } from '../../infrastructure/api/auth'
+import { setTokens, clearTokens } from '../../infrastructure/api/client'
+import { hasRole as checkRole, ROLES } from '../../domain/constants/roles'
+import type { User, LoginRequest, RegisterRequest, TokenResponse } from '../../domain/types/auth'
 
 const STORAGE_KEYS = {
   ACCESS_TOKEN: 'futela_access_token',

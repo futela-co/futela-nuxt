@@ -8,8 +8,8 @@ import {
 import {
   mainNavigation,
   moduleNavigation,
-} from '~/config/navigation'
-import { useAuthStore } from '~/application/stores/auth'
+} from '../../../config/navigation'
+import { useAuthStore } from '../../../application/stores/auth'
 
 const authStore = useAuthStore()
 const route = useRoute()

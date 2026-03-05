@@ -1,4 +1,4 @@
-import type { ApiError } from '~/application/composables/useApi'
+import type { ApiError } from './useApi'
 
 /**
  * Validation rule type

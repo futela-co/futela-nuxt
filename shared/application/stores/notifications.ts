@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { notificationsApi } from '~/infrastructure/api/notifications'
-import type { Notification } from '~/domain/types/user'
+import { notificationsApi } from '../../infrastructure/api/notifications'
+import type { Notification } from '../../domain/types/user'
 
 export const useNotificationsStore = defineStore('notifications', () => {
   const notifications = ref<Notification[]>([])

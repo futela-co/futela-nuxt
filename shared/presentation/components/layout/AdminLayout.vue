@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useUiStore } from '~/application/stores/ui'
-import { useAuthStore } from '~/application/stores/auth'
+import { useUiStore } from '../../../application/stores/ui'
+import { useAuthStore } from '../../../application/stores/auth'
 
 /**
  * AdminLayout.vue

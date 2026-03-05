@@ -1,9 +1,9 @@
-import fr from '~/presentation/locales/fr/index'
-import en from '~/presentation/locales/en/index'
-import ln from '~/presentation/locales/ln/index'
-import sw from '~/presentation/locales/sw/index'
-import lua from '~/presentation/locales/lua/index'
-import kg from '~/presentation/locales/kg/index'
+import fr from '../../presentation/locales/fr/index'
+import en from '../../presentation/locales/en/index'
+import ln from '../../presentation/locales/ln/index'
+import sw from '../../presentation/locales/sw/index'
+import lua from '../../presentation/locales/lua/index'
+import kg from '../../presentation/locales/kg/index'
 
 export type Locale = 'fr' | 'en' | 'ln' | 'sw' | 'lua' | 'kg'
 

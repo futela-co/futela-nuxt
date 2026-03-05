@@ -1,6 +1,6 @@
 import { api } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { Category } from '~/domain/types/property'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { Category } from '../../domain/types/property'
 
 export const categoriesApi = {
   list(): Promise<Category[]> {

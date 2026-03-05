@@ -1,6 +1,6 @@
 import { api } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { Country, Province, City, District, Town } from '~/domain/types/property'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { Country, Province, City, District, Town } from '../../domain/types/property'
 
 export interface GeoSearchResult {
   provinces: (Province & { countryName?: string })[]

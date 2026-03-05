@@ -6,7 +6,7 @@ import {
 import {
   moduleNavigation,
   getModuleFromPath,
-} from '~/config/navigation'
+} from '../../../config/navigation'
 
 interface Props {
   collapsed?: boolean

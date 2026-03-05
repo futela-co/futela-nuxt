@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
-import { rentApi } from '~/infrastructure/api/rent'
-import { propertiesApi } from '~/infrastructure/api/properties'
-import type { Lease, RentInvoice, RentPayment, LandlordDashboard } from '~/domain/types/user'
-import type { Property } from '~/domain/types/property'
+import { rentApi } from '../../infrastructure/api/rent'
+import { propertiesApi } from '../../infrastructure/api/properties'
+import type { Lease, RentInvoice, RentPayment, LandlordDashboard } from '../../domain/types/user'
+import type { Property } from '../../domain/types/property'
 
 export const useLandlordStore = defineStore('landlord', () => {
   // Dashboard

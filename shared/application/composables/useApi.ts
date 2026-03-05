@@ -1,7 +1,7 @@
 import { $fetch, type FetchError } from 'ofetch'
-import { useAuthStore } from '~/application/stores/auth'
-import { useUiStore } from '~/application/stores/ui'
-import { getEnv } from '~/config/env'
+import { useAuthStore } from '../stores/auth'
+import { useUiStore } from '../stores/ui'
+import { getEnv } from '../../config/env'
 
 // ============================================================================
 // Token Refresh Queue System

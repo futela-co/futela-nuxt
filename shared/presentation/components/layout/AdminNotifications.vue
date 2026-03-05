@@ -14,9 +14,9 @@ import {
   ExclamationCircleIcon,
   Cog6ToothIcon,
 } from '@heroicons/vue/24/outline'
-import { formatDateShort } from '~/utils/date'
-import { useNotificationsStore } from '~/application/stores/notifications'
-import type { Notification } from '~/domain/types/user'
+import { formatDateShort } from '../../../utils/date'
+import { useNotificationsStore } from '../../../application/stores/notifications'
+import type { Notification } from '../../../domain/types/user'
 
 interface Props {
   /** Maximum number of notifications to show in dropdown */

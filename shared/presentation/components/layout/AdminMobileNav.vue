@@ -14,8 +14,8 @@ import {
 import {
   moduleNavigation,
   getModuleFromPath,
-} from '~/config/navigation'
-import { useAuthStore } from '~/application/stores/auth'
+} from '../../../config/navigation'
+import { useAuthStore } from '../../../application/stores/auth'
 
 interface Props {
   /** Whether the drawer is open */

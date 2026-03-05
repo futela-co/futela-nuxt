@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { favoritesApi } from '~/infrastructure/api/favorites'
-import { useAuthStore } from '~/application/stores/auth'
+import { favoritesApi } from '../../infrastructure/api/favorites'
+import { useAuthStore } from './auth'
 
 export const useFavoritesStore = defineStore('favorites', () => {
   const favoriteIds = ref<Set<string>>(new Set())

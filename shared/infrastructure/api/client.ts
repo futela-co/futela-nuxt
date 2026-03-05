@@ -1,5 +1,5 @@
 import { ofetch, type FetchOptions } from 'ofetch'
-import { getEnv } from '~/config/env'
+import { getEnv } from '../../config/env'
 
 const STORAGE_KEY_TOKEN = 'futela_access_token'
 const STORAGE_KEY_REFRESH = 'futela_refresh_token'
@@ -148,7 +148,7 @@ export const apiClient = ofetch.create({
       if (import.meta.client) {
         // Also clear auth store state
         try {
-          const { useAuthStore } = await import('~/stores/auth')
+          const { useAuthStore } = await import('../../application/stores/auth')
           const authStore = useAuthStore()
           authStore.logout(false)
         } catch { /* ignore */ }

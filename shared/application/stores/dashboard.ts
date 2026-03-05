@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
-import { reservationsApi } from '~/infrastructure/api/reservations'
-import { favoritesApi } from '~/infrastructure/api/favorites'
-import { visitsApi } from '~/infrastructure/api/visits'
-import { notificationsApi } from '~/infrastructure/api/notifications'
-import { messagesApi } from '~/infrastructure/api/messages'
-import type { Reservation, Visit } from '~/domain/types/reservation'
-import type { Property } from '~/domain/types/property'
+import { reservationsApi } from '../../infrastructure/api/reservations'
+import { favoritesApi } from '../../infrastructure/api/favorites'
+import { visitsApi } from '../../infrastructure/api/visits'
+import { notificationsApi } from '../../infrastructure/api/notifications'
+import { messagesApi } from '../../infrastructure/api/messages'
+import type { Reservation, Visit } from '../../domain/types/reservation'
+import type { Property } from '../../domain/types/property'
 
 export interface ActivityItem {
   id: string

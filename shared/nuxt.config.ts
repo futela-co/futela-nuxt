@@ -1,8 +1,12 @@
+import { resolve } from 'path'
+
+const sharedDir = resolve(__dirname)
+
 export default defineNuxtConfig({
   css: [
-    '~/presentation/assets/css/main.css',
-    '~/presentation/assets/css/components.css',
-    '~/presentation/assets/css/transitions.css',
+    resolve(sharedDir, 'presentation/assets/css/main.css'),
+    resolve(sharedDir, 'presentation/assets/css/components.css'),
+    resolve(sharedDir, 'presentation/assets/css/transitions.css'),
   ],
 
   modules: [
@@ -25,18 +29,22 @@ export default defineNuxtConfig({
 
   components: {
     dirs: [
-      { path: '~/presentation/components/base', prefix: 'Base' },
-      { path: '~/presentation/components/form', prefix: 'Form' },
-      { path: '~/presentation/components/data', prefix: 'Data' },
-      { path: '~/presentation/components/layout', prefix: 'Admin' },
+      { path: resolve(sharedDir, 'presentation/components/base'), prefix: 'Base' },
+      { path: resolve(sharedDir, 'presentation/components/form'), prefix: 'Form' },
+      { path: resolve(sharedDir, 'presentation/components/data'), prefix: 'Data' },
+      { path: resolve(sharedDir, 'presentation/components/layout'), prefix: 'Admin' },
     ],
+  },
+
+  alias: {
+    '~shared': sharedDir,
   },
 
   imports: {
     dirs: [
-      'application/composables',
-      'application/stores',
-      'utils',
+      resolve(sharedDir, 'application/composables'),
+      resolve(sharedDir, 'application/stores'),
+      resolve(sharedDir, 'utils'),
     ],
   },
 

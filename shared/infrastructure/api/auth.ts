@@ -1,7 +1,7 @@
 import { ofetch } from 'ofetch'
 import { api, apiClient, setTokens, clearTokens, getApiBaseUrl } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { User, TokenResponse, LoginRequest, RegisterRequest, DeviceResponse } from '~/domain/types/auth'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { User, TokenResponse, LoginRequest, RegisterRequest, DeviceResponse } from '../../domain/types/auth'
 
 export const authApi = {
   login(data: LoginRequest): Promise<TokenResponse> {

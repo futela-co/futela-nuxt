@@ -1,6 +1,6 @@
 import { api } from '../client'
-import type { User } from '~/domain/types/auth'
-import type { PaginatedResponse } from '~/domain/types/common'
+import type { User } from '../../../domain/types/auth'
+import type { PaginatedResponse } from '../../../domain/types/common'
 
 export const adminUsersApi = {
   list(params?: Record<string, any>): Promise<PaginatedResponse<User>> {

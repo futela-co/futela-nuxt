@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { propertiesApi } from '~/infrastructure/api/properties'
-import type { Property } from '~/domain/types/property'
+import { propertiesApi } from '../../infrastructure/api/properties'
+import type { Property } from '../../domain/types/property'
 
 export const usePropertyStore = defineStore('property', () => {
   const properties = ref<Property[]>([])

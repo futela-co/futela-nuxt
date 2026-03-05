@@ -1,6 +1,6 @@
-import { useAuthStore } from '~/application/stores/auth'
-import type { User } from '~/domain/types/auth'
-import { useUiStore } from '~/application/stores/ui'
+import { useAuthStore } from '../stores/auth'
+import type { User } from '../../domain/types/auth'
+import { useUiStore } from '../stores/ui'
 
 /**
  * Register request interface

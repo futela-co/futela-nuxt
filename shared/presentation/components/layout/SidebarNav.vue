@@ -12,8 +12,8 @@ import {
   moduleNavigation,
   getModuleFromPath,
   type NavItem,
-} from '~/config/navigation'
-import { useAuthStore } from '~/application/stores/auth'
+} from '../../../config/navigation'
+import { useAuthStore } from '../../../application/stores/auth'
 
 interface Props {
   /** Whether the sidebar is collapsed (desktop only) */

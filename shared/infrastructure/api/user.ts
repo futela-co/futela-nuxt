@@ -1,6 +1,6 @@
 import { api } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { User } from '~/domain/types/auth'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { User } from '../../domain/types/auth'
 
 export const userApi = {
   getProfile(): Promise<User> {

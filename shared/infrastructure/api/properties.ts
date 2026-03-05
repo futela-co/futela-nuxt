@@ -1,7 +1,7 @@
 import { api } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { Property, SearchFilters } from '~/domain/types/property'
-import type { PaginatedResponse } from '~/domain/types/common'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { Property, SearchFilters } from '../../domain/types/property'
+import type { PaginatedResponse } from '../../domain/types/common'
 
 export const propertiesApi = {
   list(params?: Record<string, any>): Promise<Property[] | PaginatedResponse<Property>> {

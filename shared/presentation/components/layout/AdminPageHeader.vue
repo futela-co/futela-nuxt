@@ -4,7 +4,7 @@
  * Page header component with title, subtitle, breadcrumbs, and action buttons
  */
 import { ArrowLeftIcon } from '@heroicons/vue/24/outline'
-import { useUiStore } from '~/application/stores/ui'
+import { useUiStore } from '../../../application/stores/ui'
 import type { Component } from 'vue'
 
 interface BreadcrumbItem {

@@ -1,7 +1,7 @@
 import { api } from './client'
-import { API_ENDPOINTS } from '~/domain/constants/api'
-import type { Reservation } from '~/domain/types/reservation'
-import type { PaginatedResponse } from '~/domain/types/common'
+import { API_ENDPOINTS } from '../../domain/constants/api'
+import type { Reservation } from '../../domain/types/reservation'
+import type { PaginatedResponse } from '../../domain/types/common'
 
 export const reservationsApi = {
   list(params?: Record<string, any>): Promise<PaginatedResponse<Reservation>> {

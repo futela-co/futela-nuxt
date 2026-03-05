@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { propertiesApi } from '~/infrastructure/api/properties'
-import type { Property, SearchFilters } from '~/domain/types/property'
+import { propertiesApi } from '../../infrastructure/api/properties'
+import type { Property, SearchFilters } from '../../domain/types/property'
 
 export const useSearchStore = defineStore('search', () => {
   const filters = ref<SearchFilters>({})
