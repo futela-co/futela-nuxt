@@ -48,6 +48,10 @@ export default defineNuxtConfig({
     ],
   },
 
+  build: {
+    transpile: ['vue-toastification'],
+  },
+
   postcss: {
     plugins: {
       '@tailwindcss/postcss': {},
