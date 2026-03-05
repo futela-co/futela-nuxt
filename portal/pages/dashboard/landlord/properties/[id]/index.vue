@@ -9,7 +9,7 @@ import {
   ExclamationTriangleIcon,
 } from '@heroicons/vue/24/outline'
 import { propertiesApi } from '~/infrastructure/api/properties'
-import type { Property } from '~/types/property'
+import type { Property } from '~/domain/types/property'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 

@@ -6,7 +6,7 @@ import {
   EyeIcon,
   StarIcon,
 } from '@heroicons/vue/24/solid'
-import type { ActivityItem } from '~/stores/dashboard'
+import type { ActivityItem } from '~/application/stores/dashboard'
 // formatDateTime auto-imported from ~/utils/date
 
 defineProps<{

@@ -5,9 +5,9 @@ import {
   DocumentArrowDownIcon,
 } from '@heroicons/vue/24/outline'
 import type { DataTableColumn } from '~/components/data/DataTable.vue'
-import { useLandlordStore } from '~/stores/landlord'
+import { useLandlordStore } from '~/application/stores/landlord'
 import { formatDateShort } from '~/utils/date'
-import type { RentInvoice } from '~/types/user'
+import type { RentInvoice } from '~/domain/types/user'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 

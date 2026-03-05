@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Property } from '~/types/property'
+import type { Property } from '~/domain/types/property'
 
 interface Props {
   property: Property

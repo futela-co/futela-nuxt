@@ -7,7 +7,7 @@ import {
   PhoneIcon,
   HomeModernIcon,
 } from '@heroicons/vue/24/outline'
-import { useLandlordStore } from '~/stores/landlord'
+import { useLandlordStore } from '~/application/stores/landlord'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 

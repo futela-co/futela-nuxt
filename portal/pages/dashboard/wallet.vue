@@ -6,7 +6,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import { walletApi } from '~/infrastructure/api/wallet'
 import { formatDateTime } from '~/utils/date'
-import type { Transaction } from '~/types/user'
+import type { Transaction } from '~/domain/types/user'
 
 definePageMeta({ layout: 'dashboard' })
 

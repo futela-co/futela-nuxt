@@ -12,7 +12,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import { geographyApi } from '~/infrastructure/api/geography'
 import type { GeoSearchResult } from '~/infrastructure/api/geography'
-import type { Town } from '~/types/property'
+import type { Town } from '~/domain/types/property'
 
 const { t } = useLocale()
 

@@ -12,8 +12,8 @@ import { StarIcon as StarOutline } from '@heroicons/vue/24/outline'
 import { visitsApi } from '~/infrastructure/api/visits'
 import { reviewsApi } from '~/infrastructure/api/reviews'
 import { formatDateTime, formatDateShort } from '~/utils/date'
-import type { Visit } from '~/types/reservation'
-import type { Review } from '~/types/user'
+import type { Visit } from '~/domain/types/reservation'
+import type { Review } from '~/domain/types/user'
 
 definePageMeta({ layout: 'dashboard' })
 

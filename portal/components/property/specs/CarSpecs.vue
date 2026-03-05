@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { CheckCircleIcon } from '@heroicons/vue/24/solid'
-import type { Property } from '~/types/property'
+import type { Property } from '~/domain/types/property'
 
 defineProps<{ property: Property }>()
 </script>

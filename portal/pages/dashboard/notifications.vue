@@ -6,12 +6,12 @@ import {
   BellSlashIcon,
   ChatBubbleLeftRightIcon,
 } from '@heroicons/vue/24/outline'
-import { useAuthStore } from '~/stores/auth'
+import { useAuthStore } from '~/application/stores/auth'
 import { notificationsApi } from '~/infrastructure/api/notifications'
 import { messagesApi } from '~/infrastructure/api/messages'
 import { formatDateTime } from '~/utils/date'
-import type { Notification } from '~/types/user'
-import type { Conversation, Message } from '~/types/user'
+import type { Notification } from '~/domain/types/user'
+import type { Conversation, Message } from '~/domain/types/user'
 
 definePageMeta({ layout: 'dashboard' })
 

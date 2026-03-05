@@ -25,7 +25,7 @@ import {
 import type { UploadedImage } from '~/components/form/FormImageUpload.vue'
 import { propertiesApi } from '~/infrastructure/api/properties'
 import { geographyApi } from '~/infrastructure/api/geography'
-import type { Country, Province, City, Town } from '~/types/property'
+import type { Country, Province, City, Town } from '~/domain/types/property'
 
 const props = withDefaults(defineProps<{
   mode: 'create' | 'edit'

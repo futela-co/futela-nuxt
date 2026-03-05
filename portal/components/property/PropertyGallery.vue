@@ -11,7 +11,7 @@ import {
   TruckIcon,
   PhotoIcon,
 } from '@heroicons/vue/24/outline'
-import type { Photo } from '~/types/property'
+import type { Photo } from '~/domain/types/property'
 
 interface Props {
   photos: Photo[]

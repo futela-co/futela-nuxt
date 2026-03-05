@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Reservation } from '~/types/reservation'
+import type { Reservation } from '~/domain/types/reservation'
 // formatDateShort auto-imported from ~/utils/date
 
 defineProps<{

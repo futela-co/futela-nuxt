@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { UserCircleIcon } from '@heroicons/vue/24/solid'
-import type { Review } from '~/types/user'
+import type { Review } from '~/domain/types/user'
 
 interface Props {
   review: Review

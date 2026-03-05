@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { BuildingOffice2Icon, HomeIcon, GlobeAltIcon, BuildingLibraryIcon, TruckIcon } from '@heroicons/vue/24/outline'
 import { categoriesApi } from '~/infrastructure/api/categories'
-import type { Category } from '~/types/property'
+import type { Category } from '~/domain/types/property'
 
 const categories = ref<Category[]>([])
 const loading = ref(true)

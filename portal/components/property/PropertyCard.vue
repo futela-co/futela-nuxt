@@ -9,9 +9,9 @@ import {
   PhotoIcon,
 } from '@heroicons/vue/24/outline'
 import { HeartIcon as HeartSolid, StarIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/vue/24/solid'
-import { useFavoritesStore } from '~/stores/favorites'
-import { useAuthStore } from '~/stores/auth'
-import type { Property } from '~/types/property'
+import { useFavoritesStore } from '~/application/stores/favorites'
+import { useAuthStore } from '~/application/stores/auth'
+import type { Property } from '~/domain/types/property'
 
 interface Props {
   property?: Property

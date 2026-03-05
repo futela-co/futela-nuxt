@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Lease } from '~/types/user'
+import type { Lease } from '~/domain/types/user'
 
 interface Props {
   modelValue: boolean

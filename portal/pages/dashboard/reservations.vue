@@ -8,7 +8,7 @@ import {
 } from '@heroicons/vue/24/outline'
 import { reservationsApi } from '~/infrastructure/api/reservations'
 import { formatDateShort } from '~/utils/date'
-import type { Reservation } from '~/types/reservation'
+import type { Reservation } from '~/domain/types/reservation'
 
 definePageMeta({ layout: 'dashboard' })
 

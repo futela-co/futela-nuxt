@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Message } from '~/types/user'
+import type { Message } from '~/domain/types/user'
 // formatDateTime auto-imported from ~/utils/date
 
 const props = defineProps<{

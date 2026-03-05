@@ -12,8 +12,8 @@ import {
 import { HeartIcon as HeartSolid, StarIcon as StarSolid } from '@heroicons/vue/24/solid'
 import { reviewsApi } from '~/infrastructure/api/reviews'
 import { reservationsApi } from '~/infrastructure/api/reservations'
-import type { Property } from '~/types/property'
-import type { Review } from '~/types/user'
+import type { Property } from '~/domain/types/property'
+import type { Review } from '~/domain/types/user'
 
 definePageMeta({
   layout: 'default',
