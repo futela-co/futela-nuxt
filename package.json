@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": ["portal", "cpanel"],
+  "scripts": {
+    "dev": "concurrently -n portal,cpanel -c green,blue \"npm run dev:portal\" \"npm run dev:cpanel\"",
+    "dev:portal": "cd portal && nuxt dev",
+    "dev:cpanel": "cd cpanel && nuxt dev",
+    "build": "npm run build:portal && npm run build:cpanel",
+    "build:portal": "cd portal && nuxt build",
+    "build:cpanel": "cd cpanel && nuxt build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
