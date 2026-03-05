@@ -6,9 +6,9 @@ import {
   MagnifyingGlassIcon,
   FireIcon,
 } from '@heroicons/vue/24/outline'
-import type { SearchFilters } from '~/types/property'
+import type { SearchFilters } from '~shared/domain/types/property'
 
-import { geographyApi, type GeoSearchResult } from '~/infrastructure/api/geography'
+import { geographyApi, type GeoSearchResult } from '~shared/infrastructure/api/geography'
 
 interface Props {
   filters: SearchFilters

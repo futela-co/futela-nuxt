@@ -10,11 +10,16 @@ export default defineConfig({
     include: ['tests/**/*.{test,spec}.ts'],
     coverage: {
       provider: 'v8',
-      include: ['utils/**', 'composables/**', 'stores/**'],
+      include: [
+        '../shared/utils/**',
+        '../shared/application/composables/**',
+        '../shared/application/stores/**',
+      ],
     },
   },
   resolve: {
     alias: {
+      '~shared': resolve(__dirname, '../shared'),
       '~': resolve(__dirname, '.'),
       '@': resolve(__dirname, '.'),
     },

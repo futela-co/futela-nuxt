@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { MagnifyingGlassIcon, PlusIcon } from '@heroicons/vue/24/outline'
-import type { Conversation } from '~/types/user'
+import type { Conversation } from '~shared/domain/types/user'
 
 const props = defineProps<{
   conversations: Conversation[]

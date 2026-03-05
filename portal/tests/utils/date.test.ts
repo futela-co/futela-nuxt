@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { formatDateShort, formatDateLong, formatDateTime } from '~/utils/date'
+import { formatDateShort, formatDateLong, formatDateTime } from '~shared/utils/date'
 
 describe('date utils', () => {
   describe('formatDateShort', () => {

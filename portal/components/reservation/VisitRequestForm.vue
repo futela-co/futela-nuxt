@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CalendarIcon, ClockIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { visitsApi } from '~/infrastructure/api/visits'
-import { useUiStore } from '~/stores/ui'
+import { visitsApi } from '~shared/infrastructure/api/visits'
+import { useUiStore } from '~shared/application/stores/ui'
 
 interface Props {
   propertyId: string

@@ -10,7 +10,7 @@ import {
   phone,
   numeric,
   confirmed,
-} from '~/utils/validators'
+} from '~shared/utils/validators'
 
 describe('validators', () => {
   describe('required', () => {

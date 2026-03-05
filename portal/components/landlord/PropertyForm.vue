@@ -23,9 +23,9 @@ import {
   UserGroupIcon,
 } from '@heroicons/vue/24/outline'
 import type { UploadedImage } from '~/components/form/FormImageUpload.vue'
-import { propertiesApi } from '~/infrastructure/api/properties'
-import { geographyApi } from '~/infrastructure/api/geography'
-import type { Country, Province, City, Town } from '~/types/property'
+import { propertiesApi } from '~shared/infrastructure/api/properties'
+import { geographyApi } from '~shared/infrastructure/api/geography'
+import type { Country, Province, City, Town } from '~shared/domain/types/property'
 
 const props = withDefaults(defineProps<{
   mode: 'create' | 'edit'

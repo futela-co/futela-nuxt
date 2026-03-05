@@ -5,7 +5,7 @@ import {
   HomeModernIcon,
 } from '@heroicons/vue/24/outline'
 import type { DataTableColumn } from '~/components/data/DataTable.vue'
-import { useLandlordStore } from '~/stores/landlord'
+import { useLandlordStore } from '~shared/application/stores/landlord'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 

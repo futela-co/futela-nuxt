@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { required, min } from '~/utils/validators'
+import { required, min } from '~shared/utils/validators'
 import type { SelectOption } from '~/components/base/BaseSelect.vue'
-import type { Property } from '~/types/property'
+import type { Property } from '~shared/domain/types/property'
 
 interface Props {
   properties: Property[]

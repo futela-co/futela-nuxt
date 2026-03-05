@@ -5,9 +5,9 @@ import {
   EyeIcon,
 } from '@heroicons/vue/24/outline'
 import type { DataTableColumn } from '~/components/data/DataTable.vue'
-import { useLandlordStore } from '~/stores/landlord'
+import { useLandlordStore } from '~shared/application/stores/landlord'
 // formatDateShort auto-imported from ~/utils/date
-import type { Lease } from '~/types/user'
+import type { Lease } from '~shared/domain/types/user'
 
 definePageMeta({ layout: 'dashboard', landlord: true })
 

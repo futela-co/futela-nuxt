@@ -1,6 +1,6 @@
 {
   "private": true,
-  "workspaces": ["portal", "cpanel"],
+  "workspaces": ["shared", "portal", "cpanel"],
   "scripts": {
     "dev": "concurrently -n portal,cpanel -c green,blue \"npm run dev:portal\" \"npm run dev:cpanel\"",
     "dev:portal": "cd portal && nuxt dev",

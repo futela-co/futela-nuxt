@@ -6,9 +6,9 @@ import {
   ClockIcon,
   InboxIcon,
 } from '@heroicons/vue/24/outline'
-import { reservationsApi } from '~/infrastructure/api/reservations'
-import { formatDateShort } from '~/utils/date'
-import type { Reservation } from '~/types/reservation'
+import { reservationsApi } from '~shared/infrastructure/api/reservations'
+import { formatDateShort } from '~shared/utils/date'
+import type { Reservation } from '~shared/domain/types/reservation'
 
 definePageMeta({ layout: 'dashboard' })
 
