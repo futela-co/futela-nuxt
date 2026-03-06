@@ -9,9 +9,10 @@ export default defineNuxtRouteMiddleware(async (to) => {
     authStore.initializeAuth()
   }
 
-  // All cpanel routes require authentication
+  // All cpanel routes require authentication — redirect to portal login with return URL
   if (!authStore.isAuthenticated) {
-    return navigateTo(`${portalUrl}/auth/login`, { external: true })
+    const cpanelUrl = useRuntimeConfig().public.cpanelUrl || 'http://localhost:3007'
+    return navigateTo(`${portalUrl}/auth/login?redirect=${encodeURIComponent(String(cpanelUrl))}`, { external: true })
   }
 
   // All cpanel routes require admin role

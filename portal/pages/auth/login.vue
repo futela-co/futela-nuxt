@@ -19,6 +19,32 @@ definePageMeta({
 const authStore = useAuthStore()
 const route = useRoute()
 const { t } = useLocale()
+const { cpanelUrl } = useRuntimeConfig().public
+
+function getSafeRedirect(): { path: string; external: boolean } {
+  const redirect = route.query.redirect as string
+  if (!redirect) return { path: '/dashboard', external: false }
+
+  // Allow redirect to cpanel (external, same platform)
+  const cpanel = String(cpanelUrl)
+  if (cpanel && redirect.startsWith(cpanel)) {
+    // Append auth tokens for cross-app auth
+    const token = authStore.token
+    const refresh = authStore.refreshToken
+    const user = encodeURIComponent(JSON.stringify(authStore.user))
+    return {
+      path: `${redirect}#auth_token=${token}&auth_refresh=${refresh}&auth_user=${user}`,
+      external: true,
+    }
+  }
+
+  // Internal redirect: must start with / and not be an auth page
+  if (redirect.startsWith('/') && !redirect.startsWith('/auth/')) {
+    return { path: redirect, external: false }
+  }
+
+  return { path: '/dashboard', external: false }
+}
 
 const identifier = ref('')
 const password = ref('')
@@ -68,12 +94,8 @@ async function handleSubmit() {
     })
 
     if (result.success) {
-      const redirect = route.query.redirect as string
-      // Validate redirect: must start with / and not be an auth page
-      const safeRedirect = redirect && redirect.startsWith('/') && !redirect.startsWith('/auth/')
-        ? redirect
-        : '/dashboard'
-      await navigateTo(safeRedirect)
+      const { path, external } = getSafeRedirect()
+      await navigateTo(path, { external })
     } else {
       error.value = result.message || t('auth.loginError')
     }
@@ -92,11 +114,8 @@ async function handleGoogleAuth(idToken: string) {
     const result = await authStore.loginWithGoogle(idToken)
 
     if (result.success) {
-      const redirect = route.query.redirect as string
-      const safeRedirect = redirect && redirect.startsWith('/') && !redirect.startsWith('/auth/')
-        ? redirect
-        : '/dashboard'
-      await navigateTo(safeRedirect)
+      const { path, external } = getSafeRedirect()
+      await navigateTo(path, { external })
     } else {
       error.value = result.message || t('auth.googleError')
     }

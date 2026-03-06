@@ -34,12 +34,28 @@ export default defineNuxtRouteMiddleware(async (to) => {
         if (import.meta.client) {
           localStorage.removeItem('auth_redirect_url')
         }
+        // Handle cross-app redirect to cpanel
+        if (redirectUrl.startsWith(String(cpanelUrl))) {
+          const token = authStore.token
+          const refresh = authStore.refreshToken
+          const user = encodeURIComponent(JSON.stringify(authStore.user))
+          return navigateTo(
+            `${redirectUrl}#auth_token=${token}&auth_refresh=${refresh}&auth_user=${user}`,
+            { external: true },
+          )
+        }
         return navigateTo(redirectUrl)
       }
 
-      // Redirect based on role
-      if (authStore.isAdmin) {
-        return navigateTo(String(cpanelUrl), { external: true })
+      // Redirect based on role — admins go to cpanel with auth tokens
+      if (authStore.isAdmin && import.meta.client) {
+        const token = authStore.token
+        const refresh = authStore.refreshToken
+        const user = encodeURIComponent(JSON.stringify(authStore.user))
+        return navigateTo(
+          `${cpanelUrl}#auth_token=${token}&auth_refresh=${refresh}&auth_user=${user}`,
+          { external: true },
+        )
       }
       return navigateTo('/dashboard')
     }
@@ -80,9 +96,15 @@ export default defineNuxtRouteMiddleware(async (to) => {
     }
   }
 
-  // Admin routes redirect to cpanel
-  if (to.meta.admin) {
-    return navigateTo(String(cpanelUrl), { external: true })
+  // Admin routes redirect to cpanel with auth tokens
+  if (to.meta.admin && import.meta.client) {
+    const token = authStore.token
+    const refresh = authStore.refreshToken
+    const user = encodeURIComponent(JSON.stringify(authStore.user))
+    return navigateTo(
+      `${cpanelUrl}#auth_token=${token}&auth_refresh=${refresh}&auth_user=${user}`,
+      { external: true },
+    )
   }
 
   // Set page title
