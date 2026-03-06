@@ -127,14 +127,14 @@ onUnmounted(() => {
         <button
           type="button"
           class="w-full text-left px-4 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-50"
-          @click="navigate('/login')"
+          @click="navigate('/auth/login')"
         >
           {{ t('nav.login') }}
         </button>
         <button
           type="button"
           class="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50"
-          @click="navigate('/register')"
+          @click="navigate('/auth/register')"
         >
           {{ t('nav.register') }}
         </button>
