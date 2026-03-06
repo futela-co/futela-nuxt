@@ -143,16 +143,14 @@ export const apiClient = ofetch.create({
         await ofetch(response.url, retryOptions)
         return
       }
-      // Refresh failed — clear everything and redirect to login
+      // Refresh failed — clear tokens (middleware will handle redirect on next navigation)
       clearTokens()
       if (import.meta.client) {
-        // Also clear auth store state
         try {
           const { useAuthStore } = await import('../../application/stores/auth')
           const authStore = useAuthStore()
-          authStore.logout(false)
+          authStore.clearAuthData()
         } catch { /* ignore */ }
-        navigateTo('/')
       }
     }
   },
