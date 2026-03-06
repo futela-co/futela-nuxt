@@ -94,16 +94,15 @@ export const useAuthStore = defineStore('auth', () => {
 
     try {
       const tokens = await authApi.login(credentials)
-      authApi.storeTokens(tokens)
-      token.value = tokens.accessToken
-      refreshTokenValue.value = tokens.refreshToken
-
       const userData = await authApi.me(tokens.accessToken)
-      user.value = userData
-      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(userData))
+
+      // Set everything atomically to avoid intermediate states
+      setAuthData(tokens, userData)
 
       return { success: true }
     } catch (err: any) {
+      // Clean up any partial state on failure
+      clearAuthData()
       error.value = err.data?.message || 'Échec de la connexion'
       return { success: false, message: error.value ?? undefined }
     } finally {
@@ -117,16 +116,13 @@ export const useAuthStore = defineStore('auth', () => {
 
     try {
       const tokens = await authApi.register(data)
-      authApi.storeTokens(tokens)
-      token.value = tokens.accessToken
-      refreshTokenValue.value = tokens.refreshToken
-
       const userData = await authApi.me(tokens.accessToken)
-      user.value = userData
-      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(userData))
+
+      setAuthData(tokens, userData)
 
       return { success: true }
     } catch (err: any) {
+      clearAuthData()
       error.value = err.data?.message || "Échec de l'inscription"
       return { success: false, message: error.value ?? undefined }
     } finally {
@@ -140,16 +136,13 @@ export const useAuthStore = defineStore('auth', () => {
 
     try {
       const tokens = await authApi.googleAuth(idToken)
-      authApi.storeTokens(tokens)
-      token.value = tokens.accessToken
-      refreshTokenValue.value = tokens.refreshToken
-
       const userData = await authApi.me(tokens.accessToken)
-      user.value = userData
-      localStorage.setItem(STORAGE_KEYS.USER, JSON.stringify(userData))
+
+      setAuthData(tokens, userData)
 
       return { success: true }
     } catch (err: any) {
+      clearAuthData()
       error.value = err.data?.message || 'Échec de la connexion avec Google'
       return { success: false, message: error.value ?? undefined }
     } finally {
