@@ -11,6 +11,11 @@ export default defineNuxtRouteMiddleware(async (to) => {
 
   uiStore.clearErrorPage()
 
+  // Ensure auth state is restored from localStorage (handles race conditions with plugin)
+  if (import.meta.client && !authStore.isAuthenticated) {
+    authStore.initializeAuth()
+  }
+
   // Public routes - bypass
   if (to.meta.public) {
     return
