@@ -77,7 +77,6 @@ const currentPageInfo = computed(() => {
 // Logout
 async function logout() {
   auth.logout()
-  navigateTo('/auth/login')
 }
 
 // Toggle user menu
