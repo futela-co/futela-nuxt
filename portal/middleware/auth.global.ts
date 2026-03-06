@@ -1,7 +1,7 @@
 import { useAuthStore } from '~shared/application/stores/auth'
 import { useUiStore } from '~shared/application/stores/ui'
 
-let lastUserCheck = 0
+let lastUserCheck = Date.now()
 const USER_CHECK_INTERVAL = 60000
 
 export default defineNuxtRouteMiddleware(async (to) => {

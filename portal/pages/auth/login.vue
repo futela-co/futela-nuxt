@@ -95,7 +95,7 @@ async function handleSubmit() {
 
     if (result.success) {
       const { path, external } = getSafeRedirect()
-      await navigateTo(path, { external })
+      await navigateTo(path, { external, replace: true })
     } else {
       error.value = result.message || t('auth.loginError')
     }
@@ -115,7 +115,7 @@ async function handleGoogleAuth(idToken: string) {
 
     if (result.success) {
       const { path, external } = getSafeRedirect()
-      await navigateTo(path, { external })
+      await navigateTo(path, { external, replace: true })
     } else {
       error.value = result.message || t('auth.googleError')
     }
