@@ -152,7 +152,7 @@ export const apiClient = ofetch.create({
           const authStore = useAuthStore()
           authStore.logout(false)
         } catch { /* ignore */ }
-        navigateTo('/auth/login')
+        navigateTo('/')
       }
     }
   },

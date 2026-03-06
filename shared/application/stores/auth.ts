@@ -59,7 +59,7 @@ export const useAuthStore = defineStore('auth', () => {
         user.value = null
         token.value = null
         refreshTokenValue.value = null
-        navigateTo('/auth/login')
+        navigateTo('/')
       }
       if (event.key === STORAGE_KEYS.USER && event.newValue) {
         try { user.value = JSON.parse(event.newValue) } catch { /* ignore */ }
@@ -158,7 +158,7 @@ export const useAuthStore = defineStore('auth', () => {
     clearAuthData()
 
     if (redirect && typeof window !== 'undefined') {
-      navigateTo('/auth/login')
+      navigateTo('/')
     }
   }
 
